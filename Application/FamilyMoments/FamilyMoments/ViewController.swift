@@ -8,18 +8,42 @@
 
 import UIKit
 
-class ViewController: UIViewController,FBSDKLoginButtonDelegate {
+class ViewController: UIViewController,FBSDKLoginButtonDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     //MARK: Components
     @IBOutlet weak var facebookLoginButton: FBSDKLoginButton!
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var commentTextField: UITextField!
+    @IBOutlet weak var postButton: UIButton!
+    let imagePicker = UIImagePickerController()
     
     
     //MARK: View Controller life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.facebookLoginButton.delegate = self;
+        facebookLoginButton.delegate = self;
+        imagePicker.delegate = self
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        updateUI()
     }
 
+    //MARK: Action methods
+    func updateUI(){
+        self.postButton.enabled = (FBSDKAccessToken.currentAccessToken() != nil)
+    }
+    
+    @IBAction func touchUpInsidePostButton(sender: AnyObject) {
+        print(__FUNCTION__)
+    }
+    @IBAction func tappedPhotoImageView(sender: AnyObject) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .PhotoLibrary
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
     //MARK: Facebook Button delegate
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print(__FUNCTION__)
@@ -27,11 +51,23 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate {
             credentialsProvider.logins = ["graph.facebook.com" : FBSDKAccessToken.currentAccessToken().tokenString]
             credentialsProvider.refresh()
         }
-    
+        updateUI()
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print(__FUNCTION__)
+        updateUI()
     }
+    
+    //MARK: UIImagePicker delegate
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            photoImageView.contentMode = .ScaleAspectFit
+            photoImageView.image = pickedImage
+        }
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
 
