@@ -8,6 +8,7 @@
 
 // AWS
 #import "CLIFamilyMomentsClient.h"
+#import <AWSS3/AWSS3.h>
 
 // Facebook
 #import <FBSDKCoreKit/FBSDKCoreKit.h>

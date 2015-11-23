@@ -36,6 +36,32 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate,UIImagePickerCon
     
     @IBAction func touchUpInsidePostButton(sender: AnyObject) {
         print(__FUNCTION__)
+        if photoImageView.image != nil {
+            let filename = "test.jpg"
+            
+            let image = photoImageView.image!.resizeToWidth(640)
+            
+            let fileManager = NSFileManager.defaultManager()
+            let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+            let filePathToWrite = "\(paths)/\(filename)"
+            let imageData: NSData = UIImageJPEGRepresentation(image, 0.7)!
+            
+            fileManager.createFileAtPath(filePathToWrite, contents: imageData, attributes: nil)
+            print(fileManager.fileExistsAtPath(filePathToWrite))
+            
+            let uploadRequest = AWSS3TransferManagerUploadRequest()
+            uploadRequest.body = NSURL(fileURLWithPath: filePathToWrite)
+            uploadRequest.key = filename
+            uploadRequest.bucket = "awslambdacognitoapigatewaylecture"
+            uploadRequest.ACL = AWSS3ObjectCannedACL.PublicRead
+            uploadRequest.contentType = "image/jpeg"
+
+            self.upload(uploadRequest)
+
+        }else{
+            print("You need to select an image from camera roll first")
+        }
+
     }
     @IBAction func tappedPhotoImageView(sender: AnyObject) {
         imagePicker.allowsEditing = false
@@ -67,6 +93,26 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate,UIImagePickerCon
         }
         
         picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    //MARK: AmazonS3 methods
+    func upload(uploadRequest: AWSS3TransferManagerUploadRequest) {
+        let transferManager = AWSS3TransferManager.defaultS3TransferManager()
+        
+        transferManager.upload(uploadRequest).continueWithBlock { (task) -> AnyObject! in
+            if let error = task.error {
+                    print("upload() failed: [\(error)]")
+            }
+            
+            if let exception = task.exception {
+                print("upload() failed: [\(exception)]")
+            }
+            
+            if task.result != nil {
+                print("upload() successful")
+            }
+            return nil
+        }
     }
     
 }

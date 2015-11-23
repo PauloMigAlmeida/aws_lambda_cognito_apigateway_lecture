@@ -14,6 +14,7 @@
 		915FE57E1C024CD000196546 /* CLIFamilyMomentsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 915FE5771C024CD000196546 /* CLIFamilyMomentsClient.m */; };
 		915FE57F1C024CD000196546 /* CLIListMomentsResponse_Items_item.m in Sources */ = {isa = PBXBuildFile; fileRef = 915FE5791C024CD000196546 /* CLIListMomentsResponse_Items_item.m */; };
 		915FE5801C024CD000196546 /* CLIListMomentsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 915FE57B1C024CD000196546 /* CLIListMomentsResponse.m */; };
+		91A14C981C03AC61004BC7C9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A14C971C03AC61004BC7C9 /* Extensions.swift */; };
 		91DD4B481C02225400E99E2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD4B471C02225400E99E2C /* AppDelegate.swift */; };
 		91DD4B4A1C02225400E99E2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD4B491C02225400E99E2C /* ViewController.swift */; };
 		91DD4B4D1C02225400E99E2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DD4B4B1C02225400E99E2C /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		915FE5791C024CD000196546 /* CLIListMomentsResponse_Items_item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLIListMomentsResponse_Items_item.m; sourceTree = "<group>"; };
 		915FE57A1C024CD000196546 /* CLIListMomentsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLIListMomentsResponse.h; sourceTree = "<group>"; };
 		915FE57B1C024CD000196546 /* CLIListMomentsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLIListMomentsResponse.m; sourceTree = "<group>"; };
+		91A14C971C03AC61004BC7C9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		91DD4B441C02225400E99E2C /* FamilyMoments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyMoments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DD4B471C02225400E99E2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91DD4B491C02225400E99E2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,14 @@
 			name = Delegates;
 			sourceTree = "<group>";
 		};
+		91A14C961C03AC52004BC7C9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				91A14C971C03AC61004BC7C9 /* Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		91DD4B3B1C02225400E99E2C = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +142,7 @@
 		91DD4B461C02225400E99E2C /* FamilyMoments */ = {
 			isa = PBXGroup;
 			children = (
+				91A14C961C03AC52004BC7C9 /* Extensions */,
 				915FE56F1C0249CF00196546 /* Delegates */,
 				915FE56E1C0249C300196546 /* ViewControllers */,
 				915519891C02585A007F644C /* TableViewCells */,
@@ -280,6 +291,7 @@
 				915FE5711C0249E500196546 /* ListMomentsViewController.swift in Sources */,
 				9155198B1C025891007F644C /* ListMomentsTableViewCell.swift in Sources */,
 				91DD4B4A1C02225400E99E2C /* ViewController.swift in Sources */,
+				91A14C981C03AC61004BC7C9 /* Extensions.swift in Sources */,
 				915FE57E1C024CD000196546 /* CLIFamilyMomentsClient.m in Sources */,
 				915FE57F1C024CD000196546 /* CLIListMomentsResponse_Items_item.m in Sources */,
 				91DD4B481C02225400E99E2C /* AppDelegate.swift in Sources */,
