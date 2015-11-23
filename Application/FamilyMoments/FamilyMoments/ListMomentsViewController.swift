@@ -15,8 +15,8 @@ class ListMomentsViewController: UIViewController,UITableViewDelegate, UITableVi
     
     
     //MARK: View Controller life cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         loadMoments()
     }
     
@@ -30,6 +30,7 @@ class ListMomentsViewController: UIViewController,UITableViewDelegate, UITableVi
         let item = momentsArray![indexPath.row]
         
         cell.momentCommentLabel.text = item.comment
+        cell.momentImageView.downloadImage(NSURL(string: "https://s3.amazonaws.com/awslambdacognitoapigatewaylecture/\(item.s3Object)")!)
         
         return cell
     }

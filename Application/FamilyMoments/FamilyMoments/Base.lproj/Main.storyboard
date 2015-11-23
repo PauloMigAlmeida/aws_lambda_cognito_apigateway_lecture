@@ -115,42 +115,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="375" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kxx-HI-kTL">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="480" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kxx-HI-kTL">
                                 <rect key="frame" x="0.0" y="20" width="600" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListMomentsTableViewCell" rowHeight="375" id="L73-d8-P5D" customClass="ListMomentsTableViewCell" customModule="FamilyMoments" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="375"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListMomentsTableViewCell" rowHeight="480" id="L73-d8-P5D" customClass="ListMomentsTableViewCell" customModule="FamilyMoments" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="480"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L73-d8-P5D" id="WJY-EF-Fnm">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="374.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="479.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U1P-ci-QlL">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="320"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="320" id="cgL-w7-RgV"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="423"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-jl-3Un">
-                                                    <rect key="frame" x="8" y="328" width="584" height="38.5"/>
+                                                    <rect key="frame" x="8" y="431" width="584" height="40.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40.5" id="fek-0e-7n4"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="U1P-ci-QlL" firstAttribute="top" secondItem="WJY-EF-Fnm" secondAttribute="top" id="4a1-dH-Gvw"/>
-                                                <constraint firstItem="QPI-jl-3Un" firstAttribute="top" secondItem="WJY-EF-Fnm" secondAttribute="topMargin" constant="320" id="AcZ-6G-ksJ"/>
-                                                <constraint firstItem="U1P-ci-QlL" firstAttribute="leading" secondItem="WJY-EF-Fnm" secondAttribute="leading" id="Gvm-zd-SWe"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="QPI-jl-3Un" secondAttribute="bottom" id="QSK-Hd-lXD"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="QPI-jl-3Un" secondAttribute="leading" id="dzd-3w-lzh"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="QPI-jl-3Un" secondAttribute="trailing" id="gxr-I5-IPV"/>
-                                                <constraint firstAttribute="trailing" secondItem="U1P-ci-QlL" secondAttribute="trailing" id="xdk-vB-Vd3"/>
+                                                <constraint firstItem="QPI-jl-3Un" firstAttribute="top" secondItem="U1P-ci-QlL" secondAttribute="bottom" constant="8" id="9ZW-fq-fnn"/>
+                                                <constraint firstAttribute="bottom" secondItem="QPI-jl-3Un" secondAttribute="bottom" constant="8" id="GzP-T8-lxP"/>
+                                                <constraint firstItem="U1P-ci-QlL" firstAttribute="top" secondItem="WJY-EF-Fnm" secondAttribute="top" id="Kzf-ng-NQT"/>
+                                                <constraint firstAttribute="trailing" secondItem="QPI-jl-3Un" secondAttribute="trailing" constant="8" id="P8A-hg-nJh"/>
+                                                <constraint firstAttribute="trailing" secondItem="U1P-ci-QlL" secondAttribute="trailing" id="nQd-Jr-LPb"/>
+                                                <constraint firstItem="QPI-jl-3Un" firstAttribute="leading" secondItem="WJY-EF-Fnm" secondAttribute="leading" constant="8" id="q5E-Lu-yFk"/>
+                                                <constraint firstItem="U1P-ci-QlL" firstAttribute="leading" secondItem="WJY-EF-Fnm" secondAttribute="leading" id="zEh-89-4QA"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imageView" destination="U1P-ci-QlL" id="EIB-LK-W5f"/>
                                             <outlet property="momentCommentLabel" destination="QPI-jl-3Un" id="FYc-0R-ii3"/>
                                             <outlet property="momentImageView" destination="U1P-ci-QlL" id="LgI-vK-gdl"/>
                                         </connections>

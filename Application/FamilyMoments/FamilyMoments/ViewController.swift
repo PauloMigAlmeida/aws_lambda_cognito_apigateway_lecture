@@ -37,17 +37,20 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate,UIImagePickerCon
     @IBAction func touchUpInsidePostButton(sender: AnyObject) {
         print(__FUNCTION__)
         if photoImageView.image != nil {
-            let filename = "test.jpg"
+            let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            loadingNotification.mode = MBProgressHUDMode.Indeterminate
+            loadingNotification.labelText = "Posting"
             
+            let randomString = randomStringWithLength(10)
+            
+            let filename = "\(randomString).jpg"
             let image = photoImageView.image!.resizeToWidth(640)
-            
             let fileManager = NSFileManager.defaultManager()
             let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
             let filePathToWrite = "\(paths)/\(filename)"
             let imageData: NSData = UIImageJPEGRepresentation(image, 0.7)!
             
             fileManager.createFileAtPath(filePathToWrite, contents: imageData, attributes: nil)
-            print(fileManager.fileExistsAtPath(filePathToWrite))
             
             let uploadRequest = AWSS3TransferManagerUploadRequest()
             uploadRequest.body = NSURL(fileURLWithPath: filePathToWrite)
@@ -55,18 +58,36 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate,UIImagePickerCon
             uploadRequest.bucket = "awslambdacognitoapigatewaylecture"
             uploadRequest.ACL = AWSS3ObjectCannedACL.PublicRead
             uploadRequest.contentType = "image/jpeg"
-
-            self.upload(uploadRequest)
+            
+            self.upload(uploadRequest, success: {
+                let createMoment = CLICreateMomentRequest()
+                createMoment._id = randomString as String
+                createMoment.comment = self.commentTextField.text
+                createMoment.s3Object = filename
+                
+                let service = CLIFamilyMomentsClient.defaultClient()
+                service.momentsPost(createMoment).waitUntilFinished()
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    loadingNotification.hide(true)
+                }
+                
+            }, failure: {exception, error in
+                print("something went wrong dude")
+                dispatch_async(dispatch_get_main_queue()) {
+                    loadingNotification.hide(true)
+                }
+            })
 
         }else{
             print("You need to select an image from camera roll first")
         }
 
     }
+    
     @IBAction func tappedPhotoImageView(sender: AnyObject) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .PhotoLibrary
-        
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
@@ -93,26 +114,6 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate,UIImagePickerCon
         }
         
         picker.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    //MARK: AmazonS3 methods
-    func upload(uploadRequest: AWSS3TransferManagerUploadRequest) {
-        let transferManager = AWSS3TransferManager.defaultS3TransferManager()
-        
-        transferManager.upload(uploadRequest).continueWithBlock { (task) -> AnyObject! in
-            if let error = task.error {
-                    print("upload() failed: [\(error)]")
-            }
-            
-            if let exception = task.exception {
-                print("upload() failed: [\(exception)]")
-            }
-            
-            if task.result != nil {
-                print("upload() successful")
-            }
-            return nil
-        }
     }
     
 }
