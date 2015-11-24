@@ -30,7 +30,7 @@ class ListMomentsViewController: UIViewController,UITableViewDelegate, UITableVi
         let item = momentsArray![indexPath.row]
         
         cell.momentCommentLabel.text = item.comment
-        cell.momentImageView.downloadImage(NSURL(string: "https://s3.amazonaws.com/awslambdacognitoapigatewaylecture/\(item.s3Object)")!)
+        cell.momentImageView.downloadImage(NSURL(string: "\(GlobalConstants.AWSS3Host)/\(item.s3Object)")!)
         
         return cell
     }

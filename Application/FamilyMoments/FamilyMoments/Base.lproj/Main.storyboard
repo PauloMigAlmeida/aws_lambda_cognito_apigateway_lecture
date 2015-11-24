@@ -8,7 +8,7 @@
         <!--Create-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FamilyMoments" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CreateMomentViewController" customModule="FamilyMoments" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -47,7 +47,7 @@
                                     <constraint firstAttribute="height" constant="21" id="cNJ-gq-IPy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cta-rT-V6n">
@@ -63,11 +63,12 @@
                                     <constraint firstAttribute="height" constant="21" id="vsl-Ln-dPY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="MGy-Jh-8dL" firstAttribute="top" secondItem="lUa-Dl-fxi" secondAttribute="top" id="385-iX-qaL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cta-rT-V6n" secondAttribute="bottom" constant="194" id="AEs-Fo-K2C"/>
@@ -85,6 +86,9 @@
                             <constraint firstItem="l6J-w1-MPP" firstAttribute="leading" secondItem="6Rr-wC-3V7" secondAttribute="leading" id="iHM-c3-Hum"/>
                             <constraint firstItem="AoE-lh-PfE" firstAttribute="leading" secondItem="6Rr-wC-3V7" secondAttribute="leading" id="p71-2N-tfH"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="WAr-1F-sbh" appends="YES" id="eMb-0V-EJB"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Create" id="Bub-dk-B32"/>
                     <connections>
@@ -98,6 +102,11 @@
                 <tapGestureRecognizer id="8uG-qy-bGD">
                     <connections>
                         <action selector="tappedPhotoImageView:" destination="BYZ-38-t0r" id="3qh-4c-8n8"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="WAr-1F-sbh">
+                    <connections>
+                        <action selector="tappedView:" destination="BYZ-38-t0r" id="T2y-0C-Rif"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -126,7 +135,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="479.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U1P-ci-QlL">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="U1P-ci-QlL">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="423"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-jl-3Un">
@@ -198,4 +207,7 @@
             <point key="canvasLocation" x="1037" y="312"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="loading-placeholder" width="600" height="423"/>
+    </resources>
 </document>

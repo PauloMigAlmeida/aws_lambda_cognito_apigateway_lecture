@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9146D9F51C0406FF002C9B6C /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9146D9F41C0406FF002C9B6C /* Structs.swift */; };
 		9155198B1C025891007F644C /* ListMomentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9155198A1C025891007F644C /* ListMomentsTableViewCell.swift */; };
 		915FE5711C0249E500196546 /* ListMomentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915FE5701C0249E500196546 /* ListMomentsViewController.swift */; };
 		915FE57C1C024CD000196546 /* CLICreateMomentRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 915FE5731C024CD000196546 /* CLICreateMomentRequest.m */; };
@@ -16,7 +17,7 @@
 		915FE5801C024CD000196546 /* CLIListMomentsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 915FE57B1C024CD000196546 /* CLIListMomentsResponse.m */; };
 		91A14C981C03AC61004BC7C9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A14C971C03AC61004BC7C9 /* Extensions.swift */; };
 		91DD4B481C02225400E99E2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD4B471C02225400E99E2C /* AppDelegate.swift */; };
-		91DD4B4A1C02225400E99E2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD4B491C02225400E99E2C /* ViewController.swift */; };
+		91DD4B4A1C02225400E99E2C /* CreateMomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD4B491C02225400E99E2C /* CreateMomentViewController.swift */; };
 		91DD4B4D1C02225400E99E2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DD4B4B1C02225400E99E2C /* Main.storyboard */; };
 		91DD4B4F1C02225400E99E2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91DD4B4E1C02225400E99E2C /* Assets.xcassets */; };
 		91DD4B521C02225400E99E2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DD4B501C02225400E99E2C /* LaunchScreen.storyboard */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		91392CFCA16DD95B27C0E607 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9146D9F41C0406FF002C9B6C /* Structs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		9155198A1C025891007F644C /* ListMomentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListMomentsTableViewCell.swift; sourceTree = "<group>"; };
 		915FE56D1C022E6600196546 /* FamilyMoments-BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FamilyMoments-BridgingHeader.h"; path = "generated-src/FamilyMoments-BridgingHeader.h"; sourceTree = "<group>"; };
 		915FE5701C0249E500196546 /* ListMomentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListMomentsViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +43,7 @@
 		91A14C971C03AC61004BC7C9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		91DD4B441C02225400E99E2C /* FamilyMoments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyMoments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DD4B471C02225400E99E2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		91DD4B491C02225400E99E2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		91DD4B491C02225400E99E2C /* CreateMomentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMomentViewController.swift; sourceTree = "<group>"; };
 		91DD4B4C1C02225400E99E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91DD4B4E1C02225400E99E2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91DD4B511C02225400E99E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +71,15 @@
 				91392CFCA16DD95B27C0E607 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9146D9F31C0406F1002C9B6C /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				9146D9F41C0406FF002C9B6C /* Structs.swift */,
+				91A14C971C03AC61004BC7C9 /* Extensions.swift */,
+			);
+			name = Others;
 			sourceTree = "<group>";
 		};
 		915519891C02585A007F644C /* TableViewCells */ = {
@@ -99,7 +110,7 @@
 		915FE56E1C0249C300196546 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				91DD4B491C02225400E99E2C /* ViewController.swift */,
+				91DD4B491C02225400E99E2C /* CreateMomentViewController.swift */,
 				915FE5701C0249E500196546 /* ListMomentsViewController.swift */,
 			);
 			name = ViewControllers;
@@ -111,14 +122,6 @@
 				91DD4B471C02225400E99E2C /* AppDelegate.swift */,
 			);
 			name = Delegates;
-			sourceTree = "<group>";
-		};
-		91A14C961C03AC52004BC7C9 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				91A14C971C03AC61004BC7C9 /* Extensions.swift */,
-			);
-			name = Extensions;
 			sourceTree = "<group>";
 		};
 		91DD4B3B1C02225400E99E2C = {
@@ -142,7 +145,7 @@
 		91DD4B461C02225400E99E2C /* FamilyMoments */ = {
 			isa = PBXGroup;
 			children = (
-				91A14C961C03AC52004BC7C9 /* Extensions */,
+				9146D9F31C0406F1002C9B6C /* Others */,
 				915FE56F1C0249CF00196546 /* Delegates */,
 				915FE56E1C0249C300196546 /* ViewControllers */,
 				915519891C02585A007F644C /* TableViewCells */,
@@ -289,8 +292,9 @@
 				915FE57C1C024CD000196546 /* CLICreateMomentRequest.m in Sources */,
 				915FE5801C024CD000196546 /* CLIListMomentsResponse.m in Sources */,
 				915FE5711C0249E500196546 /* ListMomentsViewController.swift in Sources */,
+				9146D9F51C0406FF002C9B6C /* Structs.swift in Sources */,
 				9155198B1C025891007F644C /* ListMomentsTableViewCell.swift in Sources */,
-				91DD4B4A1C02225400E99E2C /* ViewController.swift in Sources */,
+				91DD4B4A1C02225400E99E2C /* CreateMomentViewController.swift in Sources */,
 				91A14C981C03AC61004BC7C9 /* Extensions.swift in Sources */,
 				915FE57E1C024CD000196546 /* CLIFamilyMomentsClient.m in Sources */,
 				915FE57F1C024CD000196546 /* CLIListMomentsResponse_Items_item.m in Sources */,

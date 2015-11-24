@@ -32,28 +32,29 @@ extension UIImage {
     }
 }
 
-extension ViewController{
+extension UIViewController{
     
-    func upload(uploadRequest: AWSS3TransferManagerUploadRequest, success:() -> Void, failure: (NSError,NSException) -> Void) {
+    func upload(uploadRequest: AWSS3TransferManagerUploadRequest) -> Bool {
         let transferManager = AWSS3TransferManager.defaultS3TransferManager()
         
-        transferManager.upload(uploadRequest).continueWithBlock { (task) -> AnyObject! in
-            if let error = task.error {
-                print("upload() failed: [\(error)]")
-                failure(task.error,task.exception)
-            }
-            
-            if let exception = task.exception {
-                print("upload() failed: [\(exception)]")
-                failure(task.error,task.exception)
-            }
-            
-            if task.result != nil {
-                print("upload() successful")
-                success()
-            }
-            return nil
+        let task = transferManager.upload(uploadRequest)
+        task.waitUntilFinished()
+        
+        if let error = task.error {
+            print("upload() failed: [\(error)]")
+            return false
         }
+        
+        if let exception = task.exception {
+            print("upload() failed: [\(exception)]")
+            return false
+        }
+        
+        if task.result != nil {
+            print("upload() successful")
+            return true
+        }
+        return false
     }
     
     // Code taken from SO: http://stackoverflow.com/a/26845710/832748
@@ -69,6 +70,12 @@ extension ViewController{
         
         return randomString
     }
+    
+    func alert(title: String!, message:String!){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .Cancel, handler: nil))
+        presentViewController(alert, animated: true, completion: nil)
+    }
 }
 
 //Code taken from SO: http://stackoverflow.com/a/27712427/832748
@@ -81,7 +88,7 @@ extension UIImageView{
     }
     
     func downloadImage(url: NSURL){
-        print("Started downloading \"\(url.URLByDeletingPathExtension!.lastPathComponent!)\".")
+        print("Started downloading \"\(url.absoluteString)")
         getDataFromUrl(url) { (data, response, error)  in
             dispatch_async(dispatch_get_main_queue()) { () -> Void in
                 guard let data = data where error == nil else { return }

@@ -18,13 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // AWS Cognito Access
-        let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "Insert your identity pool here")
+        let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: GlobalConstants.AWSCognitoIdentityPool)
         let configurationAuth = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialProvider)
         AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configurationAuth
         
         // Anonymous Access
         let configurationAnonymous = AWSServiceConfiguration(region: .USEast1, credentialsProvider: AWSAnonymousCredentialsProvider())
-        CLIFamilyMomentsClient .registerClientWithConfiguration(configurationAnonymous, forKey: "anonymousAccess")
+        CLIFamilyMomentsClient.registerClientWithConfiguration(configurationAnonymous, forKey: "anonymousAccess")
         
         // Facebook
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
