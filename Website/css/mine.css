@@ -1,0 +1,16 @@
+body{margin:0;padding:0;background-color:#fafafa;font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;color: #ff5a5f}
+.container{width:600px;}
+.container-second{width:900px;margin:0 auto;}
+@media (max-width: 768px){.container,.container-second{width:100%;}}
+header, .container,{height:77px;}
+footer{height:77px;background-color:#ff5a5f;}
+.navbar{background-color:#ffffff; height:77px;}
+.brand{width:182px;height:38px;margin-top:5px;}
+.instagram-list{padding:0;margin:0;}
+.instagram-list h2{width:583px;padding:0px 20px;color: #ff5a5f; font-size:1.1em;font:inherit;}
+.instagram-img{padding:0;}
+.list-group{text-decoration: none;}
+.list-group-item{margin-bottom: 60px;border-radius:5px;padding:0px 0px 50px 0px; background-color:#ffffff;}
+.list-group-item-second{margin-bottom:60px!important;}
+.list-group-item:first-child{margin-top:60px;margin-bottom:60px;}
+footer p{color:#ffffff;padding: 30px 0px 0px 30px;}
