@@ -68,7 +68,16 @@ class CreateMomentViewController: UIViewController,FBSDKLoginButtonDelegate,UIIm
                     createMoment.s3Object = filename
                     
                     let service = CLIFamilyMomentsClient.defaultClient()
-                    service.momentsPost(createMoment).waitUntilFinished()
+                    service.momentsPost(createMoment).continueWithBlock({ (task:AWSTask!) -> AnyObject! in
+                        if task.error != nil {
+                            print(task.error)
+                        } else {
+                            if let response = task.result as! CLIDefaultMomentResponse?{
+                                print(response.status)
+                            }
+                        }
+                        return nil
+                    }).waitUntilFinished()
                     commonBlock()
                     
                     dispatch_async(dispatch_get_main_queue()) {

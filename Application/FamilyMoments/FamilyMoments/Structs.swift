@@ -11,6 +11,6 @@ import Foundation
 struct GlobalConstants {
     static let AWSBucketName = "awslambdacognitoapigatewaylecture"
     static let AWSS3Host = "https://s3.amazonaws.com/\(AWSBucketName)"
-    static let AWSCognitoIdentityPool = "Insert your Identity Pool here"
+    static let AWSCognitoIdentityPool = ""
     static let AWSS3JpegContentType = "image/jpeg"
 }

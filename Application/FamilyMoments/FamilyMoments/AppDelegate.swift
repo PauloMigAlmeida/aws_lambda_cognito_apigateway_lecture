@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        AWSLogger.defaultLogger().logLevel = .Verbose
+        
         // AWS Cognito Access
         let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: GlobalConstants.AWSCognitoIdentityPool)
         let configurationAuth = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialProvider)

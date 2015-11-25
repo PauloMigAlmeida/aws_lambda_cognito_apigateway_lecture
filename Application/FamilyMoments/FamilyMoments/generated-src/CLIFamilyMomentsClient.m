@@ -109,7 +109,7 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
     if (self = [super init]) {
         _configuration = [configuration copy];
 
-        NSString *URLString = @"https://ujnf7mmh0h.execute-api.us-east-1.amazonaws.com/live";
+        NSString *URLString = @"https://hka75ju5ch.execute-api.us-east-1.amazonaws.com/live";
         if ([URLString hasSuffix:@"/"]) {
             URLString = [URLString substringToIndex:[URLString length] - 1];
         }

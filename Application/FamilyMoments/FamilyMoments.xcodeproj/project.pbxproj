@@ -10,11 +10,11 @@
 		9146D9F51C0406FF002C9B6C /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9146D9F41C0406FF002C9B6C /* Structs.swift */; };
 		9155198B1C025891007F644C /* ListMomentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9155198A1C025891007F644C /* ListMomentsTableViewCell.swift */; };
 		915FE5711C0249E500196546 /* ListMomentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915FE5701C0249E500196546 /* ListMomentsViewController.swift */; };
-		915FE57C1C024CD000196546 /* CLICreateMomentRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 915FE5731C024CD000196546 /* CLICreateMomentRequest.m */; };
-		915FE57D1C024CD000196546 /* CLIDefaultMomentResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 915FE5751C024CD000196546 /* CLIDefaultMomentResponse.m */; };
-		915FE57E1C024CD000196546 /* CLIFamilyMomentsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 915FE5771C024CD000196546 /* CLIFamilyMomentsClient.m */; };
-		915FE57F1C024CD000196546 /* CLIListMomentsResponse_Items_item.m in Sources */ = {isa = PBXBuildFile; fileRef = 915FE5791C024CD000196546 /* CLIListMomentsResponse_Items_item.m */; };
-		915FE5801C024CD000196546 /* CLIListMomentsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 915FE57B1C024CD000196546 /* CLIListMomentsResponse.m */; };
+		919E9E561C06263F0060F79D /* CLICreateMomentRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 919E9E4D1C06263F0060F79D /* CLICreateMomentRequest.m */; };
+		919E9E571C06263F0060F79D /* CLIDefaultMomentResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 919E9E4F1C06263F0060F79D /* CLIDefaultMomentResponse.m */; };
+		919E9E581C06263F0060F79D /* CLIFamilyMomentsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 919E9E511C06263F0060F79D /* CLIFamilyMomentsClient.m */; };
+		919E9E591C06263F0060F79D /* CLIListMomentsResponse_Items_item.m in Sources */ = {isa = PBXBuildFile; fileRef = 919E9E531C06263F0060F79D /* CLIListMomentsResponse_Items_item.m */; };
+		919E9E5A1C06263F0060F79D /* CLIListMomentsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 919E9E551C06263F0060F79D /* CLIListMomentsResponse.m */; };
 		91A14C981C03AC61004BC7C9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A14C971C03AC61004BC7C9 /* Extensions.swift */; };
 		91DD4B481C02225400E99E2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD4B471C02225400E99E2C /* AppDelegate.swift */; };
 		91DD4B4A1C02225400E99E2C /* CreateMomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD4B491C02225400E99E2C /* CreateMomentViewController.swift */; };
@@ -30,16 +30,16 @@
 		9155198A1C025891007F644C /* ListMomentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListMomentsTableViewCell.swift; sourceTree = "<group>"; };
 		915FE56D1C022E6600196546 /* FamilyMoments-BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FamilyMoments-BridgingHeader.h"; path = "generated-src/FamilyMoments-BridgingHeader.h"; sourceTree = "<group>"; };
 		915FE5701C0249E500196546 /* ListMomentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListMomentsViewController.swift; sourceTree = "<group>"; };
-		915FE5721C024CD000196546 /* CLICreateMomentRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLICreateMomentRequest.h; sourceTree = "<group>"; };
-		915FE5731C024CD000196546 /* CLICreateMomentRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLICreateMomentRequest.m; sourceTree = "<group>"; };
-		915FE5741C024CD000196546 /* CLIDefaultMomentResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLIDefaultMomentResponse.h; sourceTree = "<group>"; };
-		915FE5751C024CD000196546 /* CLIDefaultMomentResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLIDefaultMomentResponse.m; sourceTree = "<group>"; };
-		915FE5761C024CD000196546 /* CLIFamilyMomentsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLIFamilyMomentsClient.h; sourceTree = "<group>"; };
-		915FE5771C024CD000196546 /* CLIFamilyMomentsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLIFamilyMomentsClient.m; sourceTree = "<group>"; };
-		915FE5781C024CD000196546 /* CLIListMomentsResponse_Items_item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLIListMomentsResponse_Items_item.h; sourceTree = "<group>"; };
-		915FE5791C024CD000196546 /* CLIListMomentsResponse_Items_item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLIListMomentsResponse_Items_item.m; sourceTree = "<group>"; };
-		915FE57A1C024CD000196546 /* CLIListMomentsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLIListMomentsResponse.h; sourceTree = "<group>"; };
-		915FE57B1C024CD000196546 /* CLIListMomentsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLIListMomentsResponse.m; sourceTree = "<group>"; };
+		919E9E4C1C06263F0060F79D /* CLICreateMomentRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLICreateMomentRequest.h; sourceTree = "<group>"; };
+		919E9E4D1C06263F0060F79D /* CLICreateMomentRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLICreateMomentRequest.m; sourceTree = "<group>"; };
+		919E9E4E1C06263F0060F79D /* CLIDefaultMomentResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLIDefaultMomentResponse.h; sourceTree = "<group>"; };
+		919E9E4F1C06263F0060F79D /* CLIDefaultMomentResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLIDefaultMomentResponse.m; sourceTree = "<group>"; };
+		919E9E501C06263F0060F79D /* CLIFamilyMomentsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLIFamilyMomentsClient.h; sourceTree = "<group>"; };
+		919E9E511C06263F0060F79D /* CLIFamilyMomentsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLIFamilyMomentsClient.m; sourceTree = "<group>"; };
+		919E9E521C06263F0060F79D /* CLIListMomentsResponse_Items_item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLIListMomentsResponse_Items_item.h; sourceTree = "<group>"; };
+		919E9E531C06263F0060F79D /* CLIListMomentsResponse_Items_item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLIListMomentsResponse_Items_item.m; sourceTree = "<group>"; };
+		919E9E541C06263F0060F79D /* CLIListMomentsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLIListMomentsResponse.h; sourceTree = "<group>"; };
+		919E9E551C06263F0060F79D /* CLIListMomentsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLIListMomentsResponse.m; sourceTree = "<group>"; };
 		91A14C971C03AC61004BC7C9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		91DD4B441C02225400E99E2C /* FamilyMoments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyMoments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DD4B471C02225400E99E2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,16 +93,16 @@
 		915FE55D1C022D2000196546 /* generated-src */ = {
 			isa = PBXGroup;
 			children = (
-				915FE5721C024CD000196546 /* CLICreateMomentRequest.h */,
-				915FE5731C024CD000196546 /* CLICreateMomentRequest.m */,
-				915FE5741C024CD000196546 /* CLIDefaultMomentResponse.h */,
-				915FE5751C024CD000196546 /* CLIDefaultMomentResponse.m */,
-				915FE5761C024CD000196546 /* CLIFamilyMomentsClient.h */,
-				915FE5771C024CD000196546 /* CLIFamilyMomentsClient.m */,
-				915FE5781C024CD000196546 /* CLIListMomentsResponse_Items_item.h */,
-				915FE5791C024CD000196546 /* CLIListMomentsResponse_Items_item.m */,
-				915FE57A1C024CD000196546 /* CLIListMomentsResponse.h */,
-				915FE57B1C024CD000196546 /* CLIListMomentsResponse.m */,
+				919E9E4C1C06263F0060F79D /* CLICreateMomentRequest.h */,
+				919E9E4D1C06263F0060F79D /* CLICreateMomentRequest.m */,
+				919E9E4E1C06263F0060F79D /* CLIDefaultMomentResponse.h */,
+				919E9E4F1C06263F0060F79D /* CLIDefaultMomentResponse.m */,
+				919E9E501C06263F0060F79D /* CLIFamilyMomentsClient.h */,
+				919E9E511C06263F0060F79D /* CLIFamilyMomentsClient.m */,
+				919E9E521C06263F0060F79D /* CLIListMomentsResponse_Items_item.h */,
+				919E9E531C06263F0060F79D /* CLIListMomentsResponse_Items_item.m */,
+				919E9E541C06263F0060F79D /* CLIListMomentsResponse.h */,
+				919E9E551C06263F0060F79D /* CLIListMomentsResponse.m */,
 			);
 			path = "generated-src";
 			sourceTree = "<group>";
@@ -289,17 +289,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				915FE57C1C024CD000196546 /* CLICreateMomentRequest.m in Sources */,
-				915FE5801C024CD000196546 /* CLIListMomentsResponse.m in Sources */,
 				915FE5711C0249E500196546 /* ListMomentsViewController.swift in Sources */,
+				919E9E571C06263F0060F79D /* CLIDefaultMomentResponse.m in Sources */,
+				919E9E5A1C06263F0060F79D /* CLIListMomentsResponse.m in Sources */,
 				9146D9F51C0406FF002C9B6C /* Structs.swift in Sources */,
+				919E9E581C06263F0060F79D /* CLIFamilyMomentsClient.m in Sources */,
 				9155198B1C025891007F644C /* ListMomentsTableViewCell.swift in Sources */,
+				919E9E591C06263F0060F79D /* CLIListMomentsResponse_Items_item.m in Sources */,
 				91DD4B4A1C02225400E99E2C /* CreateMomentViewController.swift in Sources */,
 				91A14C981C03AC61004BC7C9 /* Extensions.swift in Sources */,
-				915FE57E1C024CD000196546 /* CLIFamilyMomentsClient.m in Sources */,
-				915FE57F1C024CD000196546 /* CLIListMomentsResponse_Items_item.m in Sources */,
+				919E9E561C06263F0060F79D /* CLICreateMomentRequest.m in Sources */,
 				91DD4B481C02225400E99E2C /* AppDelegate.swift in Sources */,
-				915FE57D1C024CD000196546 /* CLIDefaultMomentResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
